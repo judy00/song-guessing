@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import { useSongStore } from '@/stores/song'
+
+const store = useSongStore()
 </script>
 
 <template>
@@ -6,35 +9,13 @@
   <div class="bg-gray-400">
     <div class="container flex justify-center items-center mx-auto py-8 px-4 min-h-screen">
       <div class="grid grid-cols-2 gap-x-8 gap-y-10 flex-1">
-        <NuxtLink class="category-btn" :to="{ name: 'category-id', params: { id: 1 } }">
-          ① 多益職涯力
-        </NuxtLink>
-        <NuxtLink class="category-btn" :to="{ name: 'category-id', params: { id: 6 } }">
-          ⑥ 治療師的體態改良全攻略
-        </NuxtLink>
-        <NuxtLink class="category-btn" :to="{ name: 'category-id', params: { id: 2 } }">
-          ② 超級數字力
-        </NuxtLink>
-        <NuxtLink class="category-btn" :to="{ name: 'category-id', params: { id: 7 } }">
-          ⑦ 陳茻國文
-        </NuxtLink>
-        <NuxtLink class="category-btn" :to="{ name: 'category-id', params: { id: 3 } }">
-          ③ 換成日文腦
-        </NuxtLink>
-        <NuxtLink class="category-btn" :to="{ name: 'category-id', params: { id: 8 } }">
-          ⑧ 韓國個人色彩鑑定課
-        </NuxtLink>
-        <NuxtLink class="category-btn" :to="{ name: 'category-id', params: { id: 4 } }">
-          ④ 跟著修復師，重新愛上西洋藝術
-        </NuxtLink>
-        <NuxtLink class="category-btn" :to="{ name: 'category-id', params: { id: 9 } }">
-          ⑨ 葉丙成的簡報表達課
-        </NuxtLink>
-        <NuxtLink class="category-btn" :to="{ name: 'category-id', params: { id: 5 } }">
-          ⑤ 百萬業配王的內容創作課
-        </NuxtLink>
-        <NuxtLink class="category-btn" :to="{ name: 'category-id', params: { id: 10 } }">
-          ①⓪ 白瑜占星課
+        <NuxtLink
+          v-for="category in store.songQuestions"
+          :key="category.id"
+          :to="{ name: 'category-id', params: { id: category.id } }"
+          class="category-btn"
+        >
+          {{ category.name }}
         </NuxtLink>
       </div>
     </div>
