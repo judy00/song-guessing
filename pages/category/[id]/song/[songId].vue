@@ -28,17 +28,26 @@ const onClickNext = () => {
 </script>
 
 <template>
-  <div class="bg-gray-400">
+  <div class="relative overflow-hidden bg-slate-950">
+    <iframe
+      class="song-bgvideo"
+      src="https://www.youtube.com/embed/A1SLugsqXlY?si=vNPjNIDHp0v4h7Ww&amp;controls=0&amp;start=5&amp;mute=1&amp;loop=1&amp;autoplay=1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    />
+
     <div class="container relative flex flex-col justify-around items-center mx-auto py-8 min-h-screen">
       <h1 class="song-title text-8xl font-extrabold text-center text-white">
         {{ songInfo.name }}
       </h1>
 
-      <h2 v-show="step === 2" class="text-zinc-900 text-6xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
+      <h2 v-show="step === 2" class="text-slate-200 text-6xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
         {{ songInfo.question }}
       </h2>
 
-      <h2 v-show="step === 3" class="text-zinc-900 text-6xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
+      <h2 v-show="step === 3" class="text-slate-200 text-6xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
         {{ songInfo.answer }}
       </h2>
 
@@ -52,6 +61,16 @@ const onClickNext = () => {
 </template>
 
 <style>
+.song-bgvideo {
+  position: absolute;
+  width: 180%;
+  height: 110%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
 .song-title {
   text-shadow: #61c4bf 4px 4px 10px;
 }

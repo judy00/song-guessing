@@ -1,19 +1,43 @@
 <script lang="ts" setup>
+import { gsap } from 'gsap'
 import { useSongStore } from '@/stores/song'
 
+const coverName = ref('')
+
 const store = useSongStore()
+
+const slideInBackground = (cover:string) => {
+  coverName.value = cover
+
+  gsap.to('.category__cover', { xPercent: 0, yPercent: -50, opacity: 1, duration: 0.8 })
+}
+
+const slideOutBackground = () => {
+  gsap.to('.category__cover', { xPercent: 100, yPercent: -50, opacity: 0, duration: 0.5 })
+}
 </script>
 
 <template>
-  <!-- <div class="bg-cover bg-center h-screen bg-image"> -->
-  <div class="bg-gray-400">
-    <div class="container flex justify-center items-center mx-auto py-8 px-4 min-h-screen">
-      <div class="grid grid-cols-2 gap-x-8 gap-y-10 flex-1">
+  <div class="relative overflow-hidden bg-slate-950">
+    <iframe
+      class="category__background-video"
+      src="https://www.youtube.com/embed/pfLRFrgRoj8?si=bw4YK8o_amVy5Wx7&amp;controls=0&amp;start=5&amp;mute=1&amp;loop=1&amp;autoplay=1"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    />
+    <img class="category__cover" :src="`/_nuxt/assets/imgs/${coverName}`" alt="image">
+
+    <div class="container flex  items-center mx-auto py-20 px-4 min-h-screen">
+      <div class="grid grid-cols-2 gap-x-8 gap-y-10 flex-1 max-w-5xl">
         <NuxtLink
           v-for="category in store.songQuestions"
           :key="category.id"
           :to="{ name: 'category-id', params: { id: category.id } }"
-          class="category-btn"
+          class="category__btn"
+          @mouseenter="slideInBackground(category.cover)"
+          @mouseleave="slideOutBackground"
         >
           {{ category.name }}
         </NuxtLink>
@@ -23,17 +47,30 @@ const store = useSongStore()
 </template>
 
 <style>
-.bg-image {
-  /* background-image: url('https://sat-knowledge.imgix.net/banner/1700824226_%E9%9F%93%E5%9C%8B%E5%80%8B%E4%BA%BA%E8%89%B2%E5%BD%A9BANNER_%E9%A6%96%E9%A0%81_1360x520-3.jpg?fit=crop&auto=format&w=2000');  */
-  /* background-image: url('https://cdn.dribbble.com/userupload/7692721/file/original-b8d6150c3e01a622996ff092fc0af737.jpg?resize=752x501&vertical=center'); */
-  /* background-image: url('https://cdn.dribbble.com/userupload/8296196/file/original-a6cac059754f74ddba4c79d3a142cf74.jpg?resize=1024x768'); */
+.category__cover {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1200px;
+  transform: translate(0%, -50%) rotate(6deg) scale(1.4);
+  mask: linear-gradient(297deg,#000 55%,transparent 80%);
 }
 
-.category-btn {
+.category__background-video {
+  position: absolute;
+  width: 224%;
+  height: 143%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.category__btn {
   @apply text-white bg-gradient-to-b from-rose-400 via-rose-500 to-rose-600 hover:bg-gradient-to-br focus:outline-none focus:ring-rose-300 dark:focus:ring-rose-800 shadow-lg shadow-rose-500/50 dark:shadow-lg dark:shadow-rose-800/80 rounded-xl text-sm px-5 py-10 text-center text-3xl font-semibold tracking-wider me-2 mb-2 opacity-95 transition duration-1000;
 }
 
-.category-btn:hover {
+.category__btn:hover {
   @apply transform translate-y-[-5px] translate-x-[-2px] transition duration-500;
 }
 </style>

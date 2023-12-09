@@ -4,6 +4,7 @@ export const useSongStore = defineStore('song', () => {
   const songQuestions = ref([{
     id: 1,
     name: '① 多益職涯力',
+    cover: 'english.jpg',
     songs: [
       {
         id: 1,
@@ -39,6 +40,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 6,
     name: '⑥ 治療師的體態改良全攻略',
+    cover: 'body.jpg',
     songs: [
       {
         id: 5,
@@ -77,6 +79,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 2,
     name: '② 超級數字力',
+    cover: 'mj.jpg',
     songs: [
       {
         id: 9,
@@ -115,6 +118,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 7,
     name: '⑦ 陳茻國文',
+    cover: 'chinese.jpg',
     songs: [
       {
         id: 13,
@@ -156,6 +160,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 3,
     name: '③ 換成日文腦！',
+    cover: 'japanese.jpg',
     songs: [
       {
         id: 17,
@@ -194,6 +199,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 8,
     name: '⑧ 韓國個人色彩鑑定課',
+    cover: 'color.jpg',
     songs: [
       {
         id: 21,
@@ -224,6 +230,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 4,
     name: '④ 重新愛上西洋藝術',
+    cover: 'art.jpg',
     songs: [
       {
         id: 24,
@@ -262,6 +269,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 9,
     name: '⑨ 葉丙成的簡報表達課',
+    cover: 'present.jpg',
     songs: [
       {
         id: 28,
@@ -300,6 +308,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 5,
     name: '⑤ 百萬業配王的內容創作課',
+    cover: 'ads.jpg',
     songs: [
       {
         id: 32,
@@ -338,6 +347,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 10,
     name: '⑩ 白瑜占星課',
+    cover: 'star.jpg',
     songs: [
       {
         id: 36,
