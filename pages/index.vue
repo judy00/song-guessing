@@ -53,7 +53,7 @@ const slideOutBackground = () => {
   top: 50%;
   left: 50%;
   width: 1200px;
-  transform: translate(0%, -50%) rotate(6deg) scale(1.4);
+  transform: translate(0%, -50%) rotate(6deg) scale(1.5);
   mask: linear-gradient(297deg,#000 55%,transparent 80%);
 }
 

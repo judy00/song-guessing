@@ -4,7 +4,7 @@ export const useSongStore = defineStore('song', () => {
   const songQuestions = ref([{
     id: 1,
     name: '① 多益職涯力',
-    cover: 'english.jpg',
+    cover: 'english.webp',
     songs: [
       {
         id: 1,
@@ -40,7 +40,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 6,
     name: '⑥ 治療師的體態改良全攻略',
-    cover: 'body.jpg',
+    cover: 'body.webp',
     songs: [
       {
         id: 5,
@@ -79,7 +79,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 2,
     name: '② 超級數字力',
-    cover: 'mj.jpg',
+    cover: 'mj.webp',
     songs: [
       {
         id: 9,
@@ -118,7 +118,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 7,
     name: '⑦ 陳茻國文',
-    cover: 'chinese.jpg',
+    cover: 'chinese.webp',
     songs: [
       {
         id: 13,
@@ -160,7 +160,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 3,
     name: '③ 換成日文腦！',
-    cover: 'japanese.jpg',
+    cover: 'japanese.webp',
     songs: [
       {
         id: 17,
@@ -199,7 +199,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 8,
     name: '⑧ 韓國個人色彩鑑定課',
-    cover: 'color.jpg',
+    cover: 'color.webp',
     songs: [
       {
         id: 21,
@@ -230,7 +230,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 4,
     name: '④ 重新愛上西洋藝術',
-    cover: 'art.jpg',
+    cover: 'art.webp',
     songs: [
       {
         id: 24,
@@ -269,7 +269,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 9,
     name: '⑨ 葉丙成的簡報表達課',
-    cover: 'present.jpg',
+    cover: 'present.webp',
     songs: [
       {
         id: 28,
@@ -308,7 +308,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 5,
     name: '⑤ 百萬業配王的內容創作課',
-    cover: 'ads.jpg',
+    cover: 'ads.webp',
     songs: [
       {
         id: 32,
@@ -347,7 +347,7 @@ export const useSongStore = defineStore('song', () => {
   {
     id: 10,
     name: '⑩ 白瑜占星課',
-    cover: 'star.jpg',
+    cover: 'star.webp',
     songs: [
       {
         id: 36,
