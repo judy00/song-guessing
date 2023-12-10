@@ -19,8 +19,8 @@ const categoryInfo = store.getCategoryInfo({ categoryId: route.params.id })
       />
 
       <div class="container relative flex justify-center items-center mx-auto py-8 px-32 min-h-screen">
-        <NuxtLink class="flex items-center mr-8 bg-white/80 p-4 rounded-full shadow shadow-xl shadow-teal-500/40 hover:shadow-teal-500/30 hover:bg-white/100 duration-300" :to="{ name: 'index' }">
-          <svg class="w-6 h-6 text-teal-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <NuxtLink class="flex items-center mr-8 bg-white/80 p-4 rounded-full shadow shadow-xl shadow-rose-500/40 hover:shadow-rose-500/30 hover:bg-white/100 duration-300" :to="{ name: 'index' }">
+          <svg class="w-6 h-6 text-rose-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
         </NuxtLink>
@@ -66,12 +66,13 @@ const categoryInfo = store.getCategoryInfo({ categoryId: route.params.id })
 
 .song__btn {
   @apply relative flex flex-col items-center gap-y-4 text-white shadow-lg shadow-gray-500/50 dark:shadow-lg dark:shadow-gray-800/80 font-medium rounded-xl text-sm px-5 py-5 text-center text-4xl font-bold tracking-wider me-2 mb-2 overflow-hidden opacity-95 transition duration-1000;
-  background: linear-gradient(45deg, #636363, #c9c6c6, #4e4e4e)
+  background: linear-gradient(315deg, #f89b9e 0%, #c9d9ff 74%);
+  text-shadow: 2px 2px 6px #553738;
 }
 
 .song__btn:hover {
   @apply transform translate-y-[-5px] translate-x-[-2px] transition duration-500;
-  background: linear-gradient(45deg, #636363, #dfdfdf, #4e4e4e)
+  background: linear-gradient(315deg, #ffb8ba 0%, #d1dfff 74%);
 }
 
 .song__btn::after {
