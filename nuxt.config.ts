@@ -5,5 +5,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt'
   ],
-  css: ['~/assets/main.css']
+  css: ['~/assets/main.css'],
+  app: {
+    head: {
+      title: '塞特百萬大歌星'
+    },
+    baseURL: process.env.NODE_ENV === 'production' ? '/song-guessing/' : '/',
+    buildAssetsDir: '/static/'
+  }
 })
