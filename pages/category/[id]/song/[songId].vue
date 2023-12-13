@@ -38,7 +38,7 @@ const onClickNext = () => {
       allowfullscreen
     />
 
-    <div class="container relative flex flex-col justify-around items-center mx-auto py-8 min-h-screen">
+    <div class="container relative flex flex-col justify-between items-center mx-auto py-40 min-h-screen">
       <h1 class="song-title text-8xl font-extrabold text-center text-white">
         {{ songInfo.name }}
       </h1>

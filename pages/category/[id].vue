@@ -95,6 +95,7 @@ const categoryInfo = store.getCategoryInfo({ categoryId: route.params.id })
 
 .song__btn--disable {
   @apply text-gray-700 line-through cursor-auto bg-gradient-to-t from-gray-400 to-gray-600 shadow-gray-500/50;
+  text-shadow: none;
 }
 
 .song__btn--disable::after {
