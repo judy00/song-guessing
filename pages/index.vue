@@ -6,6 +6,11 @@ const coverName = ref('')
 
 const store = useSongStore()
 
+const getImageUrl = (name: string) => {
+  const assets = import.meta.glob('~/assets/imgs/*', { eager: true, import: 'default' })
+  return assets[`/assets/imgs/${name}`]
+}
+
 const slideInBackground = (cover:string) => {
   coverName.value = cover
 
@@ -27,9 +32,9 @@ const slideOutBackground = () => {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
     />
-    <img class="category__cover" :src="`/_nuxt/assets/imgs/${coverName}`" alt="image">
+    <img class="category__cover" :src="getImageUrl(coverName)" alt="category-cover">
 
-    <div class="container flex  items-center mx-auto py-20 px-4 min-h-screen">
+    <div class="container flex items-center mx-auto py-20 px-4 min-h-screen">
       <div class="grid grid-cols-2 gap-x-8 gap-y-10 flex-1 max-w-5xl">
         <NuxtLink
           v-for="category in store.songQuestions"
