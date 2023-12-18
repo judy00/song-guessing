@@ -25,6 +25,10 @@ const onClickNext = () => {
     })
   }
 }
+
+if (songInfo.isShowQuestionFirst) {
+  step.value = 2
+}
 </script>
 
 <template>
@@ -38,10 +42,13 @@ const onClickNext = () => {
       allowfullscreen
     />
 
-    <div class="container relative flex flex-col justify-between items-center mx-auto py-40 min-h-screen">
-      <h1 class="song-title text-8xl font-extrabold text-center text-white">
-        {{ songInfo.name }}
-      </h1>
+    <div class="container relative flex flex-col justify-between items-center mx-auto py-40 min-h-screen text-center">
+      <div>
+        <h1 class="song-title text-8xl font-extrabold text-center text-white">
+          {{ songInfo.name }}
+        </h1>
+        <span v-if="songInfo.type" class="text-white text-5xl leading-loose mt-6">{{ songInfo.type }}</span>
+      </div>
 
       <h2 v-show="step === 2" class="text-slate-200 text-6xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
         {{ songInfo.question }}

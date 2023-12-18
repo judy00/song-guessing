@@ -65,9 +65,9 @@ export const useSongStore = defineStore('song', () => {
         name: '金鐘罩鐵布衫 (2001)',
         star: 3,
         type: '動作題',
-        question: '請接唱並比出歌詞中的動作\n幹什麼 幹什麼 日行千里繫沙袋\n飛簷走壁莫奇怪 去去就來\n★★★★★★ ★★★★★ ★★★',
+        question: '請接唱並比出歌詞中的動作\n\n幹什麼 幹什麼 日行千里繫沙袋\n飛簷走壁莫奇怪 去去就來\n★★★★★★ ★★★★★ ★★★',
         answer: '幹什麼 幹什麼 氣沉丹田手心開\n幹什麼 幹什麼 日行千里繫沙袋\n飛簷走壁莫奇怪 去去就來\n一個馬步向前　一記左鉤拳　右鉤拳',
-        isShowQuestionFirst: true,
+        isShowQuestionFirst: false,
         isAnswered: false
       }
     ]
@@ -83,7 +83,7 @@ export const useSongStore = defineStore('song', () => {
         star: 3,
         type: '計算題',
         question: '請問以上歌詞中出現數字的總和是多少？',
-        answer: '51',
+        answer: "Sippin' sizzurp in my ride (in my ride) like Three 6\nNow I'm feelin' so fly like a G6\nLike a G6, like a G6\nNow I'm feelin' so fly like a G6\nLike a G6, like a G6\nNow I'm feelin' so fly like a G6\n6 * 8 + 3 = 51",
         isShowQuestionFirst: false,
         isAnswered: false
       },
@@ -94,7 +94,7 @@ export const useSongStore = defineStore('song', () => {
         type: '計算題',
         question: '請問以上歌詞中出現數字的總和是多少？',
         answer: '90',
-        isShowQuestionFirst: true,
+        isShowQuestionFirst: false,
         isAnswered: false
       },
       {
@@ -187,7 +187,7 @@ export const useSongStore = defineStore('song', () => {
         star: 1,
         type: '',
         question: '請回答作品名稱',
-        answer: ' 10000',
+        answer: '蠟筆小新',
         isShowQuestionFirst: true,
         isAnswered: false
       }, {
@@ -212,7 +212,7 @@ export const useSongStore = defineStore('song', () => {
         name: '跨代大勢團 (20XX)',
         star: 5,
         type: '',
-        question: '接下來會聽到混音歌曲，請分別說出歌手及歌名。',
+        question: '接下來會聽到混音歌曲，請分別說出歌手及歌名',
         answer: '2NE1 - Fire / BTS - Fire',
         isShowQuestionFirst: true,
         isAnswered: false
@@ -222,28 +222,28 @@ export const useSongStore = defineStore('song', () => {
         name: '小辣椒 (20XX)',
         star: 3,
         type: '先題目',
-        question: '接下來會聽到混音歌曲，請說出歌手及歌名。',
+        question: '接下來會聽到混音歌曲，請說出歌手及歌名',
         answer: '4minutes - Hot Issue / HyunA - Red',
         isShowQuestionFirst: true,
         isAnswered: false
       },
       {
         id: 27,
-        name: '熱播韓劇 1',
+        name: '熱播韓劇 1 (2014)',
         star: 1,
         type: '',
         question: '請問這是哪一部韓劇的主題曲？',
-        answer: '來自星星的你 / My destiny',
+        answer: '沒關係，是愛情啊',
         isShowQuestionFirst: true,
         isAnswered: false
       },
       {
         id: 28,
-        name: '熱播韓劇 2',
+        name: '熱播韓劇2 (2014)',
         star: 1,
         type: '',
         question: '請問這是哪一部韓劇的主題曲？',
-        answer: '花樣男子 宮野蠻王妃',
+        answer: '來自星星的你',
         isShowQuestionFirst: true,
         isAnswered: false
       }

@@ -34,7 +34,8 @@ const slideOutBackground = () => {
     />
     <img class="category__cover" :src="getImageUrl(coverName)" alt="category-cover">
 
-    <div class="container flex items-center mx-auto py-20 px-4 min-h-screen">
+    <div class="container relative flex items-center mx-auto py-20 px-4 min-h-screen">
+      <img class="absolute top-12 right-0 w-80" src="@/assets/imgs/logo.png" alt="logo">
       <div class="grid grid-cols-2 gap-x-8 gap-y-10 flex-1 max-w-5xl">
         <NuxtLink
           v-for="category in store.songQuestions"
