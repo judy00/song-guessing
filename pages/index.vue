@@ -41,7 +41,10 @@ const slideOutBackground = () => {
           v-for="category in store.songQuestions"
           :key="category.id"
           :to="{ name: 'category-id', params: { id: category.id } }"
-          class="category__btn"
+          :class="[
+            'category__btn',
+            { 'category__btn--disable': store.answeredCategoryIds.includes(category.id) }
+          ]"
           @mouseenter="slideInBackground(category.cover)"
           @mouseleave="slideOutBackground"
         >
@@ -78,5 +81,9 @@ const slideOutBackground = () => {
 
 .category__btn:hover {
   @apply transform translate-y-[-5px] translate-x-[-2px] transition duration-500;
+}
+
+.category__btn--disable {
+  @apply opacity-50 cursor-not-allowed;
 }
 </style>

@@ -418,6 +418,12 @@ export const useSongStore = defineStore('song', () => {
     ]
   }])
 
+  const answeredCategoryIds = computed(() => {
+    return songQuestions.value
+      .filter(category => category.songs.every(song => song.isAnswered))
+      .map(category => category.id)
+  })
+
   function getCategoryInfo ({ categoryId }) {
     const empty = {
       id: 0,
@@ -445,6 +451,7 @@ export const useSongStore = defineStore('song', () => {
 
   return {
     songQuestions,
+    answeredCategoryIds,
     getCategoryInfo,
     getSongInfo
   }
