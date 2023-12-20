@@ -7,7 +7,7 @@ const rules = ref([
   },
   {
     title: '詞海底撈',
-    content: '兩組上台 PK，每組排成隊伍，會連續播 5 首歌\n要輪流找出正確的字放到字卡架\n一人一次只能放一個字、移一次位置、刪一個字\n不用照順序，但位置要擺對\n放好就要回到隊伍線後，下一棒才能出發\n完成後組員全部舉手 通知裁判對答案\n如果答對就會直接進下一首歌\n「星星」萬用卡 可以替代任何的字，ㄧ輪五首歌裡面只能用一次'
+    content: '兩組上台 PK，每組排成隊伍，會連續播 5 首歌\n要輪流找出正確的字放到字卡架\n一人一次只能放一個字、移一次位置、刪一個字\n不用照順序，但位置要擺對\n完成後組員全部舉手 通知裁判對答案\n如果答對就會直接進下一首歌\n「星星」萬用卡 可以替代任何的字，ㄧ輪五首歌裡面只能用一次'
   },
   {
     title: '歌星搶麥戰',
@@ -26,17 +26,17 @@ const rules = ref([
 
       <div class="home-intro__mask" />
       <video class="home-intro__logo-video" autoplay muted loop playsinline>
-        <source src="@/assets/imgs/text2.mp4" type="video/mp4">
+        <source src="@/assets/imgs/home-title.mp4" type="video/mp4">
       </video>
     </section>
 
-    <!-- <video class="home-rule__ball-video" autoplay muted loop playsinline>
+    <video class="home-rule__ball-video" autoplay muted loop playsinline>
       <source src="@/assets/imgs/ball.mp4" type="video/mp4">
-    </video> -->
+    </video>
     <section class="home-rules">
       <section class="home-rule">
-        <img class="home-rule__deco-ball" src="@/assets/imgs/deco-ball-1.gif">
-        <img class="home-rule__deco-ball" src="@/assets/imgs/deco-ball-2.gif">
+        <img class="home-rule__deco-ball-1" src="@/assets/imgs/deco-ball-1.gif">
+        <img class="home-rule__deco-ball-2" src="@/assets/imgs/deco-ball-2.gif">
         <div class="home-rule__header">
           <h2 class="home-rule__title">
             {{ rules[0].title }}
@@ -56,6 +56,7 @@ const rules = ref([
         </div>
       </section>
       <section class="home-rule">
+        <img class="home-rule__deco-ball-3" src="@/assets/imgs/deco-ball-3.gif">
         <div class="home-rule__header">
           <h2 class="home-rule__title">
             {{ rules[1].title }}
@@ -75,6 +76,7 @@ const rules = ref([
         </div>
       </section>
       <section class="home-rule">
+        <img class="home-rule__deco-ball-4" src="@/assets/imgs/deco-ball-4.gif">
         <div class="home-rule__header">
           <h2 class="home-rule__title">
             {{ rules[2].title }}
@@ -142,8 +144,8 @@ const rules = ref([
 }
 
 .home-rules {
-  overflow-x: hidden;
-  background: linear-gradient(324deg, #090208 0%, #28182b 50%, #090208 100%);
+  overflow: hidden;
+  background: linear-gradient(179deg, #000 0%, #28182b 50%, #000 100%);
 }
 
 .home-rule {
@@ -154,7 +156,7 @@ const rules = ref([
   padding: 10rem 8rem;
 }
 
-.home-rule__deco-ball:first-of-type {
+.home-rule__deco-ball-1 {
   position: absolute;
   top: 0;
   left: -10%;
@@ -162,12 +164,27 @@ const rules = ref([
   transform: rotate(6deg);
 }
 
-.home-rule__deco-ball:nth-of-type(2) {
+.home-rule__deco-ball-2 {
   position: absolute;
   right: -10%;
-  bottom: -50%;
+  bottom: -40%;
   width: 500px;
   transform: rotate(6deg);
+  z-index: 1;
+}
+
+.home-rule__deco-ball-3 {
+  position: absolute;
+  left: 0%;
+  bottom: -22%;
+  transform: rotate(188deg);
+}
+
+.home-rule__deco-ball-4 {
+  position: absolute;
+  right: -6%;
+  bottom: -30%;
+  transform: rotate(230deg);
   z-index: 1;
 }
 
@@ -186,6 +203,7 @@ const rules = ref([
   position: relative;
   gap: 3rem;
   margin-bottom: 3rem;
+  z-index: 1;
 }
 
 .home-rule:nth-child(even) .home-rule__header {
@@ -241,10 +259,13 @@ const rules = ref([
 }
 
 .home-rule__ball-video {
-  position: absolute;
-  left: -50%;
-  transform: scale(1.5);
+  position: fixed;
+  left: 50%;
+  bottom: -87%;
+  transform: translateX(-50%) scale(2);
+  opacity: 0.2;
   clip-path: circle(25% at 50% 50%);
+  -webkit-clip-path: circle(25% at 50% 50%);
 }
 
 .home-rule__body {
