@@ -34,8 +34,8 @@ onMounted(() => {
       end: '+=' + slides.length * 100 + '%',
       pin: true,
       scrub: true,
-      invalidateOnRefresh: true,
-      markers: true
+      invalidateOnRefresh: true
+      // markers: true
     }
   })
 
@@ -122,10 +122,10 @@ onMounted(() => {
                   <div class="home-rule__circle home-rule__circle--yellow">
                     <div>10000</div>
                   </div>
-                  <div class="home-rule__circle home-rule__circle--orange">
+                  <div class="home-rule__circle home-rule__circle--green">
                     <div>30000</div>
                   </div>
-                  <div class="home-rule__circle home-rule__circle--purple">
+                  <div class="home-rule__circle home-rule__circle--red">
                     <div>50000</div>
                   </div>
                 </div>
@@ -417,14 +417,14 @@ onMounted(() => {
   box-shadow: 2px 2px 10px 3px #fff774;
 }
 
-.home-rule__circle--orange {
-  background-color: #fea73d;
-  box-shadow: 2px 2px 10px 3px #fea73d;
+.home-rule__circle--green {
+  background-color: #5ef54a;
+  box-shadow: 2px 2px 10px 3px #5ef54a;
 }
 
-.home-rule__circle--purple {
-  background-color: #c870ff;
-  box-shadow: 2px 2px 10px 3px #c870ff;
+.home-rule__circle--red {
+  background-color: #ff6e69;
+  box-shadow: 2px 2px 10px 3px #ff6e69;
 }
 
 .home-rule-section {

@@ -24,19 +24,18 @@ const slideOutBackground = () => {
 
 <template>
   <div class="relative overflow-hidden bg-slate-950">
-    <iframe
-      class="category__background-video"
-      src="https://www.youtube.com/embed/pfLRFrgRoj8?si=bw4YK8o_amVy5Wx7&amp;controls=0&amp;start=5&amp;mute=1&amp;loop=1&amp;autoplay=1"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-    />
-    <img class="category__cover" :src="getImageUrl(coverName)" alt="category-cover">
+    <video class="category-bg-video" autoplay muted loop playsinline>
+      <source src="@/assets/imgs/song-background-5.mp4" type="video/mp4">
+    </video>
 
+    <video class="category-bg-title-video" autoplay muted loop playsinline>
+      <source src="@/assets/imgs/game-background-1-2.mp4" type="video/mp4">
+    </video>
+
+    <img class="category__cover" :src="getImageUrl(coverName)" alt="category-cover">
     <div class="container relative flex items-center mx-auto py-20 px-4 min-h-screen">
-      <img class="absolute top-12 right-0 w-80" src="@/assets/imgs/logo.png" alt="logo">
-      <div class="grid grid-cols-2 gap-x-8 gap-y-10 flex-1 max-w-5xl">
+      <img class="category__deco" src="@/assets/imgs/deco-ball-4.gif">
+      <div class="relative left-[-10%] grid grid-cols-2 gap-x-8 gap-y-10 flex-1 max-w-6xl">
         <NuxtLink
           v-for="category in store.songQuestions"
           :key="category.id"
@@ -56,6 +55,28 @@ const slideOutBackground = () => {
 </template>
 
 <style>
+.category-bg-video {
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) ;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.category-bg-title-video {
+  position: absolute;
+  width: 70%;
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 0;
+  right: -20%;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+}
+
 .category__cover {
   opacity: 0;
   position: absolute;
@@ -76,14 +97,38 @@ const slideOutBackground = () => {
 }
 
 .category__btn {
-  @apply text-white bg-gradient-to-b from-rose-400 via-rose-500 to-rose-600 hover:bg-gradient-to-br focus:outline-none focus:ring-rose-300 dark:focus:ring-rose-800 shadow-lg shadow-rose-500/50 dark:shadow-lg dark:shadow-rose-800/80 rounded-xl text-sm px-5 py-10 text-center text-3xl font-semibold tracking-wider me-2 mb-2 opacity-95 transition duration-1000;
+  @apply text-white shadow-lg rounded-xl text-sm px-5 py-10 text-center text-3xl font-semibold tracking-wider me-2 mb-2 opacity-95 transition duration-1000;
+  background: linear-gradient(to bottom, #da71fb, #9b3ff4 , #ddbaff);
+  box-shadow: 0 10px 15px -3px #6b1ec8, 0 4px 6px -4px #652e8dcc;
 }
 
 .category__btn:hover {
   @apply transform translate-y-[-5px] translate-x-[-2px] transition duration-500;
+  background: linear-gradient(to bottom, #ecaeff, #b86eff , #ddbaff);
 }
 
 .category__btn--disable {
   @apply opacity-50 cursor-not-allowed;
+}
+
+.category__deco {
+  position: absolute;
+  bottom: -30%;
+  left: -30%;
+  transform: rotate(289deg);
+  width: 500px;
+  animation: floater 3s ease-in-out infinite;
+}
+
+@keyframes floater {
+  0% {
+    transform: rotate(289deg) translateY(0);
+  }
+  50% {
+    transform: rotate(289deg) translateY(-100px);
+  }
+  100% {
+    transform: rotate(289deg) translateY(0);
+  }
 }
 </style>
