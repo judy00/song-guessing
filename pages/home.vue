@@ -277,38 +277,6 @@ onMounted(() => {
   padding: 10rem 8rem;
 }
 
-.home-rule__deco-ball-1 {
-  position: absolute;
-  top: 0;
-  left: -10%;
-  width: 500px;
-  transform: rotate(6deg);
-}
-
-.home-rule__deco-ball-2 {
-  position: absolute;
-  right: -10%;
-  bottom: -40%;
-  width: 500px;
-  transform: rotate(6deg);
-  z-index: 1;
-}
-
-.home-rule__deco-ball-3 {
-  position: absolute;
-  left: 0%;
-  bottom: -22%;
-  transform: rotate(188deg);
-}
-
-.home-rule__deco-ball-4 {
-  position: absolute;
-  right: -6%;
-  bottom: -30%;
-  transform: rotate(230deg);
-  z-index: 1;
-}
-
 .home-rule__deco-line {
   width: 100%;
   height: 5px;

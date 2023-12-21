@@ -48,15 +48,15 @@ const categoryInfo = store.getCategoryInfo({ categoryId: route.params.id })
 </template>
 
 <style>
-.songs__background-video {
+.song-bg-video {
   position: absolute;
   width: 180%;
   height: 110%;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.5;
-  filter: blur(5px);
+  top: 65%;
+  transform: translate(-50%, -50%) scale(1.2);
+  object-fit: cover;
+  opacity: 0.4;
 }
 
 .song__btn {
