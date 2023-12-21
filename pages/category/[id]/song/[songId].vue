@@ -33,14 +33,9 @@ if (songInfo.isShowQuestionFirst) {
 
 <template>
   <div class="relative overflow-hidden bg-slate-950">
-    <iframe
-      class="song-bgvideo"
-      src="https://www.youtube.com/embed/A1SLugsqXlY?si=vNPjNIDHp0v4h7Ww&amp;controls=0&amp;start=5&amp;mute=1&amp;loop=1&amp;autoplay=1"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-    />
+    <video class="song-bgvideo" autoplay muted loop playsinline>
+      <source src="@/assets/imgs/song-background-1.mp4" type="video/mp4">
+    </video>
 
     <div class="container relative flex flex-col justify-between items-center mx-auto py-40 min-h-screen text-center">
       <div>
@@ -75,6 +70,7 @@ if (songInfo.isShowQuestionFirst) {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  object-fit: cover;
   opacity: 0.5;
 }
 

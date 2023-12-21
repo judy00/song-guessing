@@ -51,11 +51,31 @@ export const useSongStore = defineStore('song', () => {
     cover: 'body.webp',
     songs: [
       {
+        id: 36,
+        name: '搖勒搖勒 (2008)',
+        star: 1,
+        type: '',
+        question: '請問歌手與歌名？',
+        answer: '杜德偉－脫掉',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      },
+      {
+        id: 37,
+        name: '團康神曲 (XXXX)',
+        star: 1,
+        type: '',
+        question: '請問歌名是？會跳出來可以額外加分',
+        answer: '楊海薇Ｘ周秉鈞－第一支舞',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      },
+      {
         id: 20,
-        name: '下課十分鐘 (20??)',
+        name: '下課十分鐘 (20XX)',
         star: 5,
         type: '',
-        question: '請完整跳出健康操',
+        question: '請跳出健康操（可以不用念其他人名字）',
         answer: '',
         isShowQuestionFirst: true,
         isAnswered: false
@@ -64,7 +84,7 @@ export const useSongStore = defineStore('song', () => {
         id: 21,
         name: '金鐘罩鐵布衫 (2001)',
         star: 3,
-        type: '動作題',
+        type: '接唱＋動作題',
         question: '請接唱並比出歌詞中的動作\n\n幹什麼 幹什麼 日行千里繫沙袋\n飛簷走壁莫奇怪 去去就來\n★★★★★★ ★★★★★ ★★★',
         answer: '幹什麼 幹什麼 氣沉丹田手心開\n幹什麼 幹什麼 日行千里繫沙袋\n飛簷走壁莫奇怪 去去就來\n一個馬步向前　一記左鉤拳　右鉤拳',
         isShowQuestionFirst: false,
@@ -93,7 +113,7 @@ export const useSongStore = defineStore('song', () => {
         star: 1,
         type: '計算題',
         question: '請問以上歌詞中出現數字的總和是多少？',
-        answer: '90',
+        answer: '再見面 要你們傻了眼\n無所謂正面側面都是完美弧線\n再見醜小鴨再見 自卑留給昨天\n女大要十八變 看我七十二變\n18 + 72 = 90',
         isShowQuestionFirst: false,
         isAnswered: false
       },
@@ -114,6 +134,16 @@ export const useSongStore = defineStore('song', () => {
         type: '計算題',
         question: '請問剛才一共被罰多少錢?',
         answer: '1 代 1 代 1代 1代 駕照沒帶 300 塊 大牌不潔加 300\n1 代 1 代 1代 1代 超速被罰 1600 紅燈右轉加 600\n一共被罰 2800 元',
+        isShowQuestionFirst: false,
+        isAnswered: false
+      },
+      {
+        id: 37,
+        name: '不懂愛恨情愁煎熬的我們 (2012)',
+        star: 5,
+        type: '計算＋邏輯題',
+        question: '一年 365 天來算，請問剛歌詞中總共有幾天？',
+        answer: '愛有萬分之一甜 寧願我就葬在這一點\n圈圈圓圓圈圈 天天年年天天\n365 * 2 + 4 = 734',
         isShowQuestionFirst: false,
         isAnswered: false
       }
@@ -151,6 +181,16 @@ export const useSongStore = defineStore('song', () => {
         type: '接歌題',
         question: '多少年我們苦練英文發音和文法\n這幾年換他們捲著舌頭學 平上去入的變化\n★★★★★★★',
         answer: '多少年我們苦練英文發音和文法\n這幾年換他們捲著舌頭學 平上去入的變化\n平平仄仄平平仄',
+        isShowQuestionFirst: false,
+        isAnswered: false
+      },
+      {
+        id: 38,
+        name: '倪快樂嗎？(2004)',
+        star: 3,
+        type: '接歌題',
+        question: "LOCKIN POPPIN WE DANCING AIN'T NO STOPPING\n跟我一起唱快樂崇拜 快樂無害\n雖然快樂像個病毒 病毒會傳染\n★★★★★★★★★★  ★★★★★★★★★★",
+        answer: "LOCKIN POPPIN WE DANCING AIN'T NO STOPPING\n跟我一起唱快樂崇拜 快樂無害\n雖然快樂像個病毒 病毒會傳染\n90年我們等待千禧年      PARTY電子音樂瘋狂玩整夜",
         isShowQuestionFirst: false,
         isAnswered: false
       }
@@ -229,7 +269,7 @@ export const useSongStore = defineStore('song', () => {
       },
       {
         id: 27,
-        name: '熱播韓劇 1 (2014)',
+        name: '熱播韓劇 1－不完美也能愛 (2014)',
         star: 1,
         type: '',
         question: '請問這是哪一部韓劇的主題曲？',
@@ -239,7 +279,7 @@ export const useSongStore = defineStore('song', () => {
       },
       {
         id: 28,
-        name: '熱播韓劇2 (2014)',
+        name: '熱播韓劇 2－知名女演員遇上愛',
         star: 1,
         type: '',
         question: '請問這是哪一部韓劇的主題曲？',
@@ -270,7 +310,7 @@ export const useSongStore = defineStore('song', () => {
         star: 5,
         type: '歌詞內容題',
         question: '請講出上述所有藝術家的名字',
-        answer: '他心裡的野獸 比畢卡索更狂野 桃花比村上隆 畫的更氾濫鮮豔\n他愛妳隨和 愛妳方便 YEAH 敢怒不敢言\n妳自我催眠 他是藝術家 妳給他色盤 去拼貼背叛\n他不是梵谷 也不是莫內 他的模特兒 卻都從來不缺少\n畢卡索、村上隆、梵谷、莫內',
+        answer: '他心裡的野獸 比畢卡索更狂野 桃花比村上隆 畫的更氾濫鮮豔\n他愛妳隨和 愛妳方便 YEAH 敢怒不敢言\n妳自我催眠 他是藝術家 妳給他色盤 去拼貼背叛\n他不是梵谷 也不是莫內 他的模特兒 卻都從來不缺少\n「畢卡索、村上隆、梵谷、莫內」',
         isShowQuestionFirst: false,
         isAnswered: false
       },
@@ -282,6 +322,16 @@ export const useSongStore = defineStore('song', () => {
         question: '愛要精心來雕刻 ★★★★★★★',
         answer: '愛要精心來雕刻 我是米開朗基羅',
         isShowQuestionFirst: false,
+        isAnswered: false
+      },
+      {
+        id: 39,
+        name: '把錢丟水裡 (2005)',
+        star: 1,
+        type: '',
+        question: '請說出歌名與歌手',
+        answer: '蔡依林－許願池的希臘少女 (2009)',
+        isShowQuestionFirst: true,
         isAnswered: false
       }
     ]
@@ -318,6 +368,16 @@ export const useSongStore = defineStore('song', () => {
         type: '接唱題',
         question: '我不喜歡你和別人發生的 是最曖昧最不明的隱藏\n面對面看著彼此假裝正常 是最可怕最噁心的事啊\n欸嗚欸嗚欸欸　嗚嗚嗚喔喔\n★★★★★  ★★★★★\n★★★★★  ★★★  ★',
         answer: '我不喜歡你和別人發生的 是最曖昧最不明的隱藏\n面對面看著彼此假裝正常 是最可怕最噁心的事啊\n欸嗚欸嗚欸欸　嗚嗚嗚喔喔\n咦耶咦耶欸　嗚嗚嗚喔喔\n咦耶咦耶欸　嗚喔喔　喔',
+        isShowQuestionFirst: false,
+        isAnswered: false
+      },
+      {
+        id: 40,
+        name: 'One night in 北京 (2008)',
+        star: 3,
+        type: '歌詞內容題',
+        question: '請問老人在等誰？',
+        answer: '人說百花地深處  住著老情人\n縫著繡花鞋  面容安詳的老人　依舊等著那出征的歸人\n「出征的歸人」',
         isShowQuestionFirst: false,
         isAnswered: false
       }
