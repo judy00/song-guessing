@@ -11,6 +11,14 @@ const songInfo = store.getSongInfo({
 
 const step = ref(1)
 
+const answerImgSrc = computed(() => {
+  if (!songInfo.answerImg) { return }
+
+  const assets = import.meta.glob('@/assets/imgs/*', { eager: true, import: 'default' })
+  return assets[`/assets/imgs/${songInfo.answerImg}`]
+})
+
+
 const onClickNext = () => {
   if (step.value < 3) {
     step.value++
@@ -37,7 +45,7 @@ if (songInfo.isShowQuestionFirst) {
       <source src="@/assets/imgs/song-background-1.mp4" type="video/mp4">
     </video>
 
-    <div class="container relative flex flex-col justify-between items-center mx-auto py-40 min-h-screen text-center">
+    <div class="container relative flex flex-col justify-between items-center mx-auto pt-24 pb-10 min-h-screen text-center">
       <div>
         <h1 class="song-title text-7xl font-extrabold text-center text-white">
           {{ songInfo.name }}
@@ -52,6 +60,12 @@ if (songInfo.isShowQuestionFirst) {
       <h2 v-show="step === 3" class="text-slate-200 text-5xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
         {{ songInfo.answer }}
       </h2>
+      <img
+        v-show="step === 3 && songInfo.answerImg"
+        :src="answerImgSrc"
+        alt="answerImg"
+        class="w-full max-h-[250px] object-contain"
+      >
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 37" class="song-arrow w-5 cursor-pointer" @click="onClickNext">
         <path fill="#ffacf7" fill-rule="evenodd" d="M.293.293a1 1 0 0 1 1.414 0L6 4.586 10.293.293a1 1 0 1 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414Z" clip-rule="evenodd" class="arrow" />
