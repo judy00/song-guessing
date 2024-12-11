@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 export const useSongStore = defineStore('song', () => {
   const songQuestions = ref([{
     id: 1,
-    name: '① 多益職涯力',
+    name: '① 料理萬用公式課',
     cover: 'english.webp',
     songs: [
       {
@@ -46,55 +46,8 @@ export const useSongStore = defineStore('song', () => {
     ]
   },
   {
-    id: 6,
-    name: '⑥ 治療師的體態改良全攻略',
-    cover: 'body.webp',
-    songs: [
-      {
-        id: 36,
-        name: '搖勒搖勒 (2008)',
-        star: 1,
-        type: '',
-        question: '請問歌手與歌名？',
-        answer: '杜德偉－脫掉',
-        isShowQuestionFirst: true,
-        isAnswered: false
-      },
-      {
-        id: 37,
-        name: '團康神曲 (XXXX)',
-        star: 1,
-        type: '',
-        question: '請問歌名是？會跳出來可以額外加分',
-        answer: '楊海薇Ｘ周秉鈞－第一支舞',
-        isShowQuestionFirst: true,
-        isAnswered: false
-      },
-      {
-        id: 20,
-        name: '下課十分鐘 (20XX)',
-        star: 5,
-        type: '',
-        question: '請跳出健康操（可以不用念其他人名字）',
-        answer: '',
-        isShowQuestionFirst: true,
-        isAnswered: false
-      },
-      {
-        id: 21,
-        name: '金鐘罩鐵布衫 (2001)',
-        star: 3,
-        type: '接唱＋動作題',
-        question: '請接唱並比出歌詞中的動作\n\n幹什麼 幹什麼 日行千里繫沙袋\n飛簷走壁莫奇怪 去去就來\n★★★★★★ ★★★★★ ★★★',
-        answer: '幹什麼 幹什麼 氣沉丹田手心開\n幹什麼 幹什麼 日行千里繫沙袋\n飛簷走壁莫奇怪 去去就來\n一個馬步向前　一記左鉤拳　右鉤拳',
-        isShowQuestionFirst: false,
-        isAnswered: false
-      }
-    ]
-  },
-  {
     id: 2,
-    name: '② 超級數字力',
+    name: '② 自主健身百科',
     cover: 'mj.webp',
     songs: [
       {
@@ -150,8 +103,195 @@ export const useSongStore = defineStore('song', () => {
     ]
   },
   {
+    id: 3,
+    name: '③ 打通日語任督二脈',
+    cover: 'japanese.webp',
+    songs: [
+      {
+        id: 9,
+        name: '我們的青春 (1999)',
+        star: 3,
+        type: '',
+        question: '以下歌曲是翻場版本，請說出歌名、原唱、翻唱歌手',
+        answer: 'First Love、宇多田光、白冰冰',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      },
+      {
+        id: 10,
+        name: ' 拯救世界大冒險 (2004)',
+        star: 3,
+        type: '',
+        question: '請列出這部動畫裡的三個非人角色',
+        answer: '主持人專業判斷',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      },
+      {
+        id: 11,
+        name: ' 日常小品 (1990)',
+        star: 1,
+        type: '',
+        question: '請回答作品名稱',
+        answer: '蠟筆小新',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      }, {
+        id: 12,
+        name: '我要當老師 (2000)',
+        star: 1,
+        type: '',
+        question: '講出歌手的本名及藝名',
+        answer: '川島茉樹代 / Makiyo',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      }
+    ]
+  },
+  {
+    id: 4,
+    name: '④ 動物英雄聯盟大進擊',
+    cover: 'art.webp',
+    songs: [
+      {
+        id: 13,
+        name: '一起趣歐洲 (2003)',
+        star: 1,
+        type: '接唱題',
+        question: ' 那群白鴿 背對著夕陽\n★★★★★★★★★',
+        answer: '那群白鴿 背對著夕陽\n那畫面太美我不敢看',
+        isShowQuestionFirst: false,
+        isAnswered: false
+      },
+      {
+        id: 14,
+        name: '大藝術家 (2011)',
+        star: 5,
+        type: '歌詞內容題',
+        question: '請講出上述所有藝術家的名字',
+        answer: '他心裡的野獸 比畢卡索更狂野 桃花比村上隆 畫的更氾濫鮮豔\n他愛妳隨和 愛妳方便 YEAH 敢怒不敢言\n妳自我催眠 他是藝術家 妳給他色盤 去拼貼背叛\n他不是梵谷 也不是莫內 他的模特兒 卻都從來不缺少\n「畢卡索、村上隆、梵谷、莫內」',
+        isShowQuestionFirst: false,
+        isAnswered: false
+      },
+      {
+        id: 15,
+        name: ' KTV情歌對唱 (2013)',
+        star: 1,
+        type: '接唱題',
+        question: '愛要精心來雕刻 ★★★★★★★',
+        answer: '愛要精心來雕刻 我是米開朗基羅',
+        isShowQuestionFirst: false,
+        isAnswered: false
+      },
+      {
+        id: 39,
+        name: '把錢丟水裡 (2005)',
+        star: 1,
+        type: '',
+        question: '請說出歌名與歌手',
+        answer: '蔡依林－許願池的希臘少女 (2009)',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      }
+    ]
+  },
+  {
+    id: 5,
+    name: '⑤ 藝術總監角色設計實戰',
+    cover: 'ads.webp',
+    songs: [
+      {
+        id: 16,
+        name: '每天至少兩次 (2015)',
+        star: 1,
+        type: '',
+        question: '以下歌曲是什麼產品的廣告歌？',
+        answer: '黑人牙膏／好來牙膏',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      },
+      {
+        id: 17,
+        name: '三餐老外 (2012)',
+        star: 1,
+        type: '',
+        question: '以下歌曲是什麼產品的廣告歌？',
+        answer: '波蜜果菜汁',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      },
+      {
+        id: 18,
+        name: '我是電視兒童 (2011)',
+        star: 3,
+        type: '',
+        question: '以下片段是哪一個新聞台的片頭？',
+        answer: '三立新聞台',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      },
+      {
+        id: 19,
+        name: '到底在哪裡？ (2007)',
+        star: 1,
+        type: '',
+        question: '以下歌曲是什麼產品的廣告歌？',
+        answer: '可樂果',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      }
+    ]
+  },
+  {
+    id: 6,
+    name: '⑥ 居家科學微運動',
+    cover: 'body.webp',
+    songs: [
+      {
+        id: 36,
+        name: '搖勒搖勒 (2008)',
+        star: 1,
+        type: '',
+        question: '請問歌手與歌名？',
+        answer: '杜德偉－脫掉',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      },
+      {
+        id: 37,
+        name: '團康神曲 (XXXX)',
+        star: 1,
+        type: '',
+        question: '請問歌名是？會跳出來可以額外加分',
+        answer: '楊海薇Ｘ周秉鈞－第一支舞',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      },
+      {
+        id: 20,
+        name: '下課十分鐘 (20XX)',
+        star: 5,
+        type: '',
+        question: '請跳出健康操（可以不用念其他人名字）',
+        answer: '',
+        isShowQuestionFirst: true,
+        isAnswered: false
+      },
+      {
+        id: 21,
+        name: '金鐘罩鐵布衫 (2001)',
+        star: 3,
+        type: '接唱＋動作題',
+        question: '請接唱並比出歌詞中的動作\n\n幹什麼 幹什麼 日行千里繫沙袋\n飛簷走壁莫奇怪 去去就來\n★★★★★★ ★★★★★ ★★★',
+        answer: '幹什麼 幹什麼 氣沉丹田手心開\n幹什麼 幹什麼 日行千里繫沙袋\n飛簷走壁莫奇怪 去去就來\n一個馬步向前　一記左鉤拳　右鉤拳',
+        isShowQuestionFirst: false,
+        isAnswered: false
+      }
+    ]
+  },
+  {
     id: 7,
-    name: '⑦ 陳茻國文',
+    name: '⑦ 洪震宇的精準提問',
     cover: 'chinese.webp',
     songs: [
       {
@@ -192,52 +332,6 @@ export const useSongStore = defineStore('song', () => {
         question: "LOCKIN POPPIN WE DANCING AIN'T NO STOPPING\n跟我一起唱快樂崇拜 快樂無害\n雖然快樂像個病毒 病毒會傳染\n★★★★★★★★★★  ★★★★★★★★★★",
         answer: "LOCKIN POPPIN WE DANCING AIN'T NO STOPPING\n跟我一起唱快樂崇拜 快樂無害\n雖然快樂像個病毒 病毒會傳染\n90年我們等待千禧年      PARTY電子音樂瘋狂玩整夜",
         isShowQuestionFirst: false,
-        isAnswered: false
-      }
-    ]
-  },
-  {
-    id: 3,
-    name: '③ 換成日文腦！',
-    cover: 'japanese.webp',
-    songs: [
-      {
-        id: 9,
-        name: '我們的青春 (1999)',
-        star: 3,
-        type: '',
-        question: '以下歌曲是翻場版本，請說出歌名、原唱、翻唱歌手',
-        answer: 'First Love、宇多田光、白冰冰',
-        isShowQuestionFirst: true,
-        isAnswered: false
-      },
-      {
-        id: 10,
-        name: ' 拯救世界大冒險 (2004)',
-        star: 3,
-        type: '',
-        question: '請列出這部動畫裡的三個非人角色',
-        answer: '主持人專業判斷',
-        isShowQuestionFirst: true,
-        isAnswered: false
-      },
-      {
-        id: 11,
-        name: ' 日常小品 (1990)',
-        star: 1,
-        type: '',
-        question: '請回答作品名稱',
-        answer: '蠟筆小新',
-        isShowQuestionFirst: true,
-        isAnswered: false
-      }, {
-        id: 12,
-        name: '我要當老師 (2000)',
-        star: 1,
-        type: '',
-        question: '講出歌手的本名及藝名',
-        answer: '川島茉樹代 / Makiyo',
-        isShowQuestionFirst: true,
         isAnswered: false
       }
     ]
@@ -290,55 +384,8 @@ export const useSongStore = defineStore('song', () => {
     ]
   },
   {
-    id: 4,
-    name: '④ 重新愛上西洋藝術',
-    cover: 'art.webp',
-    songs: [
-      {
-        id: 13,
-        name: '一起趣歐洲 (2003)',
-        star: 1,
-        type: '接唱題',
-        question: ' 那群白鴿 背對著夕陽\n★★★★★★★★★',
-        answer: '那群白鴿 背對著夕陽\n那畫面太美我不敢看',
-        isShowQuestionFirst: false,
-        isAnswered: false
-      },
-      {
-        id: 14,
-        name: '大藝術家 (2011)',
-        star: 5,
-        type: '歌詞內容題',
-        question: '請講出上述所有藝術家的名字',
-        answer: '他心裡的野獸 比畢卡索更狂野 桃花比村上隆 畫的更氾濫鮮豔\n他愛妳隨和 愛妳方便 YEAH 敢怒不敢言\n妳自我催眠 他是藝術家 妳給他色盤 去拼貼背叛\n他不是梵谷 也不是莫內 他的模特兒 卻都從來不缺少\n「畢卡索、村上隆、梵谷、莫內」',
-        isShowQuestionFirst: false,
-        isAnswered: false
-      },
-      {
-        id: 15,
-        name: ' KTV情歌對唱 (2013)',
-        star: 1,
-        type: '接唱題',
-        question: '愛要精心來雕刻 ★★★★★★★',
-        answer: '愛要精心來雕刻 我是米開朗基羅',
-        isShowQuestionFirst: false,
-        isAnswered: false
-      },
-      {
-        id: 39,
-        name: '把錢丟水裡 (2005)',
-        star: 1,
-        type: '',
-        question: '請說出歌名與歌手',
-        answer: '蔡依林－許願池的希臘少女 (2009)',
-        isShowQuestionFirst: true,
-        isAnswered: false
-      }
-    ]
-  },
-  {
     id: 9,
-    name: '⑨ 葉丙成的簡報表達課',
+    name: '⑨ 輕鬆入門高級感 K-POP',
     cover: 'present.webp',
     songs: [
       {
@@ -384,55 +431,55 @@ export const useSongStore = defineStore('song', () => {
     ]
   },
   {
-    id: 5,
-    name: '⑤ 百萬業配王的內容創作課',
-    cover: 'ads.webp',
+    id: 10,
+    name: '⑩ 慕姿全方位關係應用課',
+    cover: 'star.webp',
     songs: [
       {
-        id: 16,
-        name: '每天至少兩次 (2015)',
+        id: 32,
+        name: '時空異能冒險 (2009)',
         star: 1,
-        type: '',
-        question: '以下歌曲是什麼產品的廣告歌？',
-        answer: '黑人牙膏／好來牙膏',
-        isShowQuestionFirst: true,
+        type: '接唱題',
+        question: '依序唸出剛剛唱出的行星名\n我穿梭 ★★ ★★ ★★ ★★ ★★ ★★',
+        answer: '我穿梭金星 木星 水星 火星 土星',
+        isShowQuestionFirst: false,
         isAnswered: false
       },
       {
-        id: 17,
-        name: '三餐老外 (2012)',
+        id: 33,
+        name: '緣分的宇宙 (2013)',
         star: 1,
-        type: '',
-        question: '以下歌曲是什麼產品的廣告歌？',
-        answer: '波蜜果菜汁',
-        isShowQuestionFirst: true,
+        type: '接唱題',
+        question: '你才是 綁架我的兇手\n機車後座的我 吹著風 逃離了平庸\n★★★ ★★★★★★★ ★★★',
+        answer: '你才是 綁架我的兇手\n機車後座的我 吹著風 逃離了平庸\n這星球 天天有五十億人 在錯過',
+        isShowQuestionFirst: false,
         isAnswered: false
       },
       {
-        id: 18,
-        name: '我是電視兒童 (2011)',
+        id: 34,
+        name: '麻雀變鳳凰 (2001)',
         star: 3,
-        type: '',
-        question: '以下片段是哪一個新聞台的片頭？',
-        answer: '三立新聞台',
+        type: '先題目',
+        question: '請說出原唱所有成員的名字',
+        answer: '言承旭、吳建豪、朱孝天、周渝民',
         isShowQuestionFirst: true,
         isAnswered: false
       },
       {
-        id: 19,
-        name: '到底在哪裡？ (2007)',
+        id: 35,
+        name: '偶像劇主題曲(2012)',
         star: 1,
-        type: '',
-        question: '以下歌曲是什麼產品的廣告歌？',
-        answer: '可樂果',
-        isShowQuestionFirst: true,
+        type: '歌詞內容題',
+        question: '請說出北極星的夥伴',
+        answer: '十字星',
+        isShowQuestionFirst: false,
         isAnswered: false
       }
     ]
   },
   {
-    id: 10,
-    name: '⑩ 白瑜占星課',
+    id: 11,
+    name: '⑪ 景安辦公室',
     cover: 'star.webp',
     songs: [
       {
@@ -478,7 +525,7 @@ export const useSongStore = defineStore('song', () => {
     ]
   }])
 
-  const answeredCategoryIds = computed(() => {
+  const fullyAnsweredCategoryIds = computed(() => {
     return songQuestions.value
       .filter(category => category.songs.every(song => song.isAnswered))
       .map(category => category.id)
@@ -511,7 +558,7 @@ export const useSongStore = defineStore('song', () => {
 
   return {
     songQuestions,
-    answeredCategoryIds,
+    fullyAnsweredCategoryIds,
     getCategoryInfo,
     getSongInfo
   }
