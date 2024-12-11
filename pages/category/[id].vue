@@ -9,7 +9,7 @@ const categoryInfo = store.getCategoryInfo({ categoryId: route.params.id })
 <template>
   <div class="relative overflow-hidden bg-slate-950">
     <template v-if="$route.name === 'category-id'">
-      <video class="song-bg-video" autoplay muted loop playsinline>
+      <video class="song-menu-bg-video" autoplay muted loop playsinline>
         <source src="@/assets/imgs/song-background-3.mp4" type="video/mp4">
       </video>
 
@@ -19,27 +19,35 @@ const categoryInfo = store.getCategoryInfo({ categoryId: route.params.id })
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
         </NuxtLink>
-        <div class="grid gap-x-8 gap-y-10 flex-1">
-          <h1 class="mb-8 text-8xl font-extrabold text-center text-white">
+        <div class="grid gap-y-5 flex-1">
+          <h1 class="mb-4 text-7xl font-bold text-center text-white">
             <span class="text-transparent bg-clip-text bg-gradient-to-r to-pink-200 from-sky-400">{{ categoryInfo.name.slice(0, 5) }}</span>{{ categoryInfo.name.slice(5) }}
           </h1>
-          <NuxtLink
-            v-for="song in categoryInfo.songs"
-            :key="song.id"
-            :class="['song__btn', { 'song__btn--disable': song.isAnswered }]"
-            :to="{ name: 'category-id-song-songId', params: { id: $route.params.id, songId: song.id } }"
-          >
-            {{ song.name }}
-            <div class="flex gap-x-3">
-              <img
-                v-for="(star, idx) in song.star"
-                :key="idx"
-                :class="['w-10', { 'opacity-50': song.isAnswered }]"
-                src="https://64.media.tumblr.com/c7962f0a224f88f965e375a33953a8c5/tumblr_msh4mj2arL1scncwdo1_500.gif"
-                alt="star"
-              >
-            </div>
-          </NuxtLink>
+          <div class="grid grid-cols-2 gap-x-6 gap-y-8">
+            <NuxtLink
+              v-for="song in categoryInfo.songs"
+              :key="song.id"
+              :class="[
+                'song__btn',
+                {
+                  'song__btn--disable': song.isAnswered,
+                  'song__btn--last': categoryInfo.songs.length > 4 && categoryInfo.songs.length % 2 === 1
+                }
+              ]"
+              :to="{ name: 'category-id-song-songId', params: { id: $route.params.id, songId: song.id } }"
+            >
+              {{ song.name }}
+              <div class="flex gap-x-2">
+                <img
+                  v-for="(star, idx) in song.star"
+                  :key="idx"
+                  :class="['w-8', { 'opacity-50': song.isAnswered }]"
+                  src="https://64.media.tumblr.com/c7962f0a224f88f965e375a33953a8c5/tumblr_msh4mj2arL1scncwdo1_500.gif"
+                  alt="star"
+                >
+              </div>
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </template>
@@ -48,19 +56,12 @@ const categoryInfo = store.getCategoryInfo({ categoryId: route.params.id })
 </template>
 
 <style>
-.song-bg-video {
-  position: absolute;
-  width: 180%;
-  height: 110%;
-  left: 50%;
-  top: 65%;
-  transform: translate(-50%, -50%) scale(1.2);
-  object-fit: cover;
-  opacity: 0.4;
+.song-menu-bg-video {
+  @apply absolute w-full h-full transform scale-125 object-cover opacity-40;
 }
 
 .song__btn {
-  @apply relative flex flex-col items-center gap-y-4 text-white shadow-lg  font-medium rounded-xl text-sm px-5 py-5 text-center text-4xl font-bold tracking-wider me-2 mb-2 overflow-hidden opacity-95 transition duration-1000;
+  @apply relative flex flex-col items-center gap-y-2 text-white text-center text-3xl tracking-wider font-bold shadow-lg rounded-xl p-5 transition duration-1000;
   background: linear-gradient(to bottom, #c39dff, #6a53ff , #b5dffc);
   text-shadow: 2px 2px 6px #614bb8;
   box-shadow: 0 10px 15px -3px #6b1ec8, 0 4px 6px -4px #652e8dcc;
@@ -71,22 +72,8 @@ const categoryInfo = store.getCategoryInfo({ categoryId: route.params.id })
   background: linear-gradient(to bottom, #d4b9ff, #8875ff , #c7e8ff);
 }
 
-.song__btn::after {
-  content:'';
-  position: absolute;
-  top:0;
-  width:300%;
-  height:300%;
-  transform:translateX(100%) rotate(30deg);
-  z-index:1;
-  animation: shine 2s infinite ease-in;
-  opacity: 0.5;
-  background:
-    linear-gradient( to right,
-      rgba(255,255,255,0) 0%,
-      rgba(255,255,255,0.8) 50%,
-      rgba(128,186,232,0) 99%,
-      rgba(128,186,232,0) 100%);
+.song__btn--last:last-child {
+  @apply col-span-2 w-1/2 justify-self-center;
 }
 
 .song__btn--disable {
@@ -97,17 +84,7 @@ const categoryInfo = store.getCategoryInfo({ categoryId: route.params.id })
   background: linear-gradient(to bottom, #909090, #aaaaaa , #616161);
 }
 
-.song__btn--disable::after {
-  animation: none;
-}
-
 .song__btn--disable:hover {
   @apply transform-none bg-gradient-to-t from-gray-400 to-gray-600;
-}
-
-@keyframes shine {
-  0% {transform:translateX(-100%) translateY(-100%) rotate(30deg);}
-  80% {transform:translateX(-100%) translateY(-100%) rotate(30deg);}
-  100% {transform:translateX(100%) translateY(100%) rotate(30deg);}
 }
 </style>

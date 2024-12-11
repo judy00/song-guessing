@@ -39,19 +39,21 @@ if (songInfo.isShowQuestionFirst) {
 
     <div class="container relative flex flex-col justify-between items-center mx-auto py-40 min-h-screen text-center">
       <div>
-        <h1 class="song-title text-8xl font-extrabold text-center text-white">
+        <h1 class="song-title text-7xl font-extrabold text-center text-white">
           {{ songInfo.name }}
         </h1>
-        <span v-if="songInfo.type" class="text-white text-5xl leading-loose mt-6">{{ songInfo.type }}</span>
+        <div v-if="songInfo.type" class="text-white text-3xl mt-5">
+          {{ songInfo.type }}
+        </div>
       </div>
-      <h2 v-show="step === 2" class="text-slate-200 text-6xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
+      <h2 v-show="step === 2" class="text-slate-200 text-5xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
         {{ songInfo.question }}
       </h2>
-      <h2 v-show="step === 3" class="text-slate-200 text-6xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
+      <h2 v-show="step === 3" class="text-slate-200 text-5xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
         {{ songInfo.answer }}
       </h2>
 
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 37" class="song-arrow w-6" @click="onClickNext">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 37" class="song-arrow w-5 cursor-pointer" @click="onClickNext">
         <path fill="#ffacf7" fill-rule="evenodd" d="M.293.293a1 1 0 0 1 1.414 0L6 4.586 10.293.293a1 1 0 1 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414Z" clip-rule="evenodd" class="arrow" />
         <path fill="#ffacf7" fill-rule="evenodd" d="M.293 15.293a1 1 0 0 1 1.414 0L6 19.586l4.293-4.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414Z" clip-rule="evenodd" class="arrow" />
         <path fill="#ffacf7" fill-rule="evenodd" d="M.293 30.293a1 1 0 0 1 1.414 0L6 34.586l4.293-4.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414Z" clip-rule="evenodd" class="arrow" />
@@ -62,14 +64,7 @@ if (songInfo.isShowQuestionFirst) {
 
 <style>
 .song-bg-video {
-  position: absolute;
-  width: 180%;
-  height: 110%;
-  left: 50%;
-  top: 65%;
-  transform: translate(-50%, -50%) scale(1.2);
-  object-fit: cover;
-  opacity: 0.4;
+  @apply absolute w-full transform scale-125 object-cover opacity-40;
 }
 
 .song-title {
@@ -77,7 +72,6 @@ if (songInfo.isShowQuestionFirst) {
 }
 
 .song-arrow {
-  cursor: pointer;
   animation: floatAnimation 2s infinite ease-in-out;
 }
 
