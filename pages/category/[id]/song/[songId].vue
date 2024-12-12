@@ -57,14 +57,14 @@ if (songInfo.isShowQuestionFirst) {
       <h2 v-show="step === 2" class="text-slate-200 text-5xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
         {{ songInfo.question }}
       </h2>
-      <h2 v-show="step === 3" class="text-slate-200 text-5xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
+      <h2 v-show="step === 3 && songInfo.answer" class="text-slate-200 text-5xl text-center font-semibold leading-snug tracking-wide whitespace-pre">
         {{ songInfo.answer }}
       </h2>
       <img
         v-show="step === 3 && songInfo.answerImg"
         :src="answerImgSrc"
         alt="answerImg"
-        class="w-full max-h-[250px] object-contain"
+        class="w-full max-h-[300px] object-contain"
       >
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 37" class="song-arrow w-5 cursor-pointer" @click="onClickNext">

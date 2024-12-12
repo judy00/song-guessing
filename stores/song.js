@@ -39,7 +39,7 @@ export const useSongStore = defineStore('song', () => {
       {
         id: 4,
         name: '又甜又辣(2023)',
-        star: 3,
+        star: 5,
         type: '動作題',
         question: '請完整跳出舞步',
         answer: '',
@@ -66,7 +66,7 @@ export const useSongStore = defineStore('song', () => {
       {
         id: 2,
         name: '這是你的導遊ADA(2013)',
-        star: 1,
+        star: 3,
         type: '',
         question: '請問跟著老師動吃動後，明天乳酸堆積在哪裡？',
         answer: '胸肌腹肌三角肌\n二頭三頭四頭肌',
@@ -135,7 +135,7 @@ export const useSongStore = defineStore('song', () => {
         name: '世界上最不幸的美少女',
         star: 4,
         type: '內容題',
-        question: '請說出主角們需要集合力量時的咒語\n答對一位得一分',
+        question: '請說出主角們需要集合力量時的咒語\n答對一位得一萬分',
         answer: '霹靂卡霹靂拉拉，輕鬆開朗\n拍拍砰呸，溫柔優美\n帕美魯克拉魯克，樂音高亢\n噗嚕嚕噗嚕，清新爽朗\n佩魯坦佩登，舒爽明亮\n皮皮多噗力多，活潑舒暢\n噗囉林 噗哇林 微笑打開',
         isShowQuestionFirst: true,
         isAnswered: false
@@ -170,10 +170,10 @@ export const useSongStore = defineStore('song', () => {
       {
         id: 3,
         name: '火球祭嗨翻全場(2019)',
-        star: 3,
+        star: 1,
         type: '歌詞內容題',
         question: '請問剛有出現哪些動物跟昆蟲？',
-        answer: '七彩衣的鳥、小黑猩猩、綠色青蛙、蜜蜂女皇',
+        answer: '七彩衣的鳥、小黑猩猩',
         isShowQuestionFirst: false,
         isAnswered: false
       },
@@ -227,7 +227,7 @@ export const useSongStore = defineStore('song', () => {
       {
         id: 4,
         name: '可愛喇叭嘴 (1986)',
-        star: 2,
+        star: 3,
         type: '',
         question: '這是什麼作品的片頭',
         answer: '企鵝家族',
@@ -239,7 +239,7 @@ export const useSongStore = defineStore('song', () => {
         name: '品學兼優聽話孝順根本不可能 (1997)',
         star: 3,
         type: '內容題',
-        question: '南方公園是一個什麼樣的地方？',
+        question: '這是一個什麼樣的地方？',
         answer: '這是一個沒有暴力溫馨的地方',
         isShowQuestionFirst: false,
         isAnswered: false
@@ -264,7 +264,7 @@ export const useSongStore = defineStore('song', () => {
       {
         id: 2,
         name: '肌肉麻瓜 (2024)',
-        star: 3,
+        star: 5,
         type: '動作題',
         question: '請跳出副歌的舞蹈',
         answer: '',
@@ -311,10 +311,10 @@ export const useSongStore = defineStore('song', () => {
       {
         id: 2,
         name: '禁止帶回飯店房間(2018)',
-        star: 2,
+        star: 5,
         type: '歌詞內容題',
         question: '請問浪子為什麼要回頭？',
-        answer: '因為愛',
+        answer: '',
         answerImg: 'song-answer-7-2.webp',
         isShowQuestionFirst: false,
         isAnswered: false
@@ -332,7 +332,7 @@ export const useSongStore = defineStore('song', () => {
       {
         id: 4,
         name: '被害者的心聲(2018)',
-        star: 2,
+        star: 3,
         type: '',
         question: '請搶答歌⼿與歌名',
         answer: '李友廷 - 誰',
@@ -369,7 +369,7 @@ export const useSongStore = defineStore('song', () => {
       {
         id: 3,
         name: '偶像還是 Rapper(2020)',
-        star: 2,
+        star: 3,
         type: '接唱題',
         question: "要去這 要去那 要陪你去逛街\n躺沙發 躺整天 會不會簡單些\n還要角色扮演 一路玩到半夜\n出門穿情侶裝 穿你最愛的餅乾鞋\n★★★★★★★★ color\n★★★★★★★★★★ I'm in love\n★★★★★★★★★",
         answer: "要去這 要去那 要陪你去逛街\n躺沙發 躺整天 會不會簡單些\n還要角色扮演 一路玩到半夜\n出門穿情侶裝 穿你最愛的餅乾鞋\n我的世界多了好多 color\n遇見你像中樂透我發了I'm in love\n藍色天空都變粉紅色",
@@ -426,10 +426,10 @@ export const useSongStore = defineStore('song', () => {
       {
         id: 4,
         name: 'I will it (2024)',
-        star: 2,
+        star: 5,
         type: '計算題',
         question: '請問剛總共出現了幾個 U？',
-        answer: "24 次\nThis time I want\nYou You You You like it's magnetic\nU U U U U U U U super 이끌림\nYou You You You like it's magnetic\nU U U U U U U U super 이끌림",
+        answer: "26 次\nThis time I want\nYou You You You like it's magnetic\nU U U U U U U U super 이끌림\nYou You You You like it's magnetic\nU U U U U U U U super 이끌림",
         isShowQuestionFirst: false,
         isAnswered: false
       },
